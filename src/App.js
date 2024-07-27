@@ -48,7 +48,6 @@ function App() {
         addToPlaylist={addToPlaylist}
       />
       <Playlist
-        playlistTitle="Avo's Playlist"
         playlistTracks={playlist}
         removeFromPlaylist={removeFromPlaylist}
       />
