@@ -1,11 +1,7 @@
 import React, { useState } from "react";
 
-export default function SearchBar(props) {
+export default function SearchBar({ onSearch }) {
   const [searchTerm, setSearchTerm] = useState("");
-
-  function handleClick() {
-    alert(`you searched for ${searchTerm}`);
-  }
 
   return (
     <div className="searchBar">
@@ -19,7 +15,7 @@ export default function SearchBar(props) {
       ></input>
       <p>{searchTerm}</p>
 
-      <button onClick={handleClick}>GO!</button>
+      <button onClick={() => onSearch(searchTerm)}>GO!</button>
     </div>
   );
 }

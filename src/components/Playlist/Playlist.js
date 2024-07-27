@@ -1,24 +1,25 @@
 import React, { useState } from "react";
 import Tracklist from "../Tracklist/Tracklist.js";
 
-export default function Playlist({ playlistTracks, removeFromPlaylist }) {
-  const [playlistName, setPlaylistName] = useState("My Playlist");
-
+export default function Playlist({
+  playlistName,
+  onNameChange,
+  playlistTracks,
+  removeFromPlaylist,
+  onSave,
+}) {
   return (
     <div className="Playlist">
       <input
-        type="text"
-        name="playlistName"
-        id="playlistName"
-        placeholder={playlistName}
-        onChange={(e) => setPlaylistName(e.target.value)}
+        defaultValue={playlistName}
+        onChange={(e) => onNameChange(e.target.value)}
       />
 
       <Tracklist
         tracks={playlistTracks}
         removeFromPlaylist={removeFromPlaylist}
       />
-      <button>Save to Spotify</button>
+      <button onClick={onSave}>Save to Spotify</button>
     </div>
   );
 }
