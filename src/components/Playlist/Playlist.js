@@ -9,7 +9,7 @@ export default function Playlist({
   onSave,
 }) {
   return (
-    <div className="Playlist">
+    <div class="Playlist">
       <input
         defaultValue={playlistName}
         onChange={(e) => onNameChange(e.target.value)}

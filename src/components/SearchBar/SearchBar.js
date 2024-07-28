@@ -4,7 +4,7 @@ export default function SearchBar({ onSearch }) {
   const [searchTerm, setSearchTerm] = useState("");
 
   return (
-    <div className="searchBar">
+    <div class="searchBar">
       <label for="search-input">Search</label>
       <input
         type="search"

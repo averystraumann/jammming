@@ -1,4 +1,5 @@
 import Track from "../Track/Track.js";
+import styles from "../Tracklist/Tracklist.module.css";
 
 export default function Tracklist({
   tracks,
@@ -6,7 +7,7 @@ export default function Tracklist({
   removeFromPlaylist,
 }) {
   return (
-    <div className="Tracklist">
+    <div class="Tracklist">
       {tracks?.map((track) => {
         return (
           <div class="searchResultTrack">
