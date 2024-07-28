@@ -13,9 +13,9 @@ export default function SearchBar({ onSearch }) {
         placeholder="Search for Music"
         onChange={(e) => setSearchTerm(e.target.value)}
       ></input>
-      <p>{searchTerm}</p>
-
-      <button onClick={() => onSearch(searchTerm)}>GO!</button>
+      <button id="go" onClick={() => onSearch(searchTerm)}>
+        GO!
+      </button>
     </div>
   );
 }

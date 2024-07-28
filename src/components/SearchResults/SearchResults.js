@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import Tracklist from "../Tracklist/Tracklist.js";
+import "./SearchResults.css";
 
 export default function SearchResults({ searchResultsTracks, addToPlaylist }) {
   return (
-    <div class="SearchResults">
-      <h2>Search Results</h2>
+    <div className="SearchResults">
       <Tracklist tracks={searchResultsTracks} addToPlaylist={addToPlaylist} />
     </div>
   );

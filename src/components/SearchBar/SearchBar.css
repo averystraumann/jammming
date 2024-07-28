@@ -1,7 +1,7 @@
 .SearchBar {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: center;
+  gap: 3%;
 }
 
 .SearchBar input {
@@ -14,6 +14,22 @@
   text-align: center;
   font-size: 1.7rem;
   color: #ff9b9b;
+}
+
+.SearchBar #go {
+  border-radius: 100%;
+  height: 60px;
+  width: 60px;
+  border: 0.2em solid #ff6666;
+  text-align: center;
+  font-weight: bold;
+  color: #ff6666;
+  background-color: #ff666630;
+}
+
+.SearchBar #go:hover {
+  background-color: #ff666660;
+  transition: 0.5s;
 }
 
 ::placeholder {
