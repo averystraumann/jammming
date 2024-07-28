@@ -9,3 +9,18 @@
   font-size: 1.7rem;
   color: #ff9b9b;
 }
+
+.Playlist #save {
+  border: none;
+  border-radius: 4px;
+  background: #ff666630;
+  font-size: 1.7rem;
+  margin: 4% 2%;
+  padding: 2%;
+  color: #ff9b9b;
+}
+
+.Playlist #save:hover {
+  background: #ff666660;
+  transition-duration: 0.5s;
+}

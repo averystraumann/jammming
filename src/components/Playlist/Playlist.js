@@ -20,7 +20,9 @@ export default function Playlist({
         tracks={playlistTracks}
         removeFromPlaylist={removeFromPlaylist}
       />
-      <button onClick={onSave}>Save to Spotify</button>
+      <button id="save" onClick={onSave}>
+        Save to Spotify
+      </button>
     </div>
   );
 }
