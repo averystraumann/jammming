@@ -1,5 +1,5 @@
 import Track from "../Track/Track.js";
-import styles from "../Tracklist/Tracklist.module.css";
+import styles from "../Track/Track.css";
 
 export default function Tracklist({
   tracks,
@@ -10,16 +10,16 @@ export default function Tracklist({
     <div class="Tracklist">
       {tracks?.map((track) => {
         return (
-          <div class="searchResultTrack">
+          <div className="Track">
             <Track title={track.name} artist={track.artist} />
             {addToPlaylist && (
-              <button onClick={() => addToPlaylist(track)}>
-                Add to playlist
+              <button id="add" onClick={() => addToPlaylist(track)}>
+                +
               </button>
             )}
             {removeFromPlaylist && (
-              <button onClick={() => removeFromPlaylist(track)}>
-                Remove From Playlist
+              <button id="remove" onClick={() => removeFromPlaylist(track)}>
+                -
               </button>
             )}
           </div>

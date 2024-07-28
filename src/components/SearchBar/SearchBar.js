@@ -1,11 +1,11 @@
 import React, { useState } from "react";
+import "./SearchBar.css";
 
 export default function SearchBar({ onSearch }) {
   const [searchTerm, setSearchTerm] = useState("");
 
   return (
-    <div class="searchBar">
-      <label for="search-input">Search</label>
+    <div className="SearchBar">
       <input
         type="search"
         name="search-input"

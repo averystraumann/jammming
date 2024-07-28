@@ -1,0 +1,24 @@
+.App {
+  text-align: center;
+  color: #d3d0d9;
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+}
+
+.SearchSection {
+  width: 45%;
+  margin: 2%;
+  height: 90%;
+}
+
+.PlaylistSection {
+  width: 45%;
+  margin: 2%;
+}
+
+.Divider {
+  margin: 5%;
+  border: 1px white solid;
+}

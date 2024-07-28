@@ -1,10 +1,10 @@
-import "./App.css";
+import styles from "./App.css";
 import React, { useState } from "react";
 
-import SearchBar from "./components/SearchBar/SearchBar.js";
-import SearchResults from "./components/SearchResults/SearchResults.js";
-import Playlist from "./components/Playlist/Playlist.js";
-import Spotify from "./util/Spotify.js";
+import SearchBar from "../SearchBar/SearchBar.js";
+import SearchResults from "../SearchResults/SearchResults.js";
+import Playlist from "../Playlist/Playlist.js";
+import Spotify from "../../util/Spotify.js";
 
 function App() {
   const [playlist, setPlaylist] = useState([]);
@@ -38,18 +38,25 @@ function App() {
 
   return (
     <div className="App">
-      <SearchBar onSearch={onSearch} />
-      <SearchResults
-        searchResultsTracks={searchResults}
-        addToPlaylist={addToPlaylist}
-      />
-      <Playlist
-        playlistName={playlistName}
-        onNameChange={setPlaylistName}
-        playlistTracks={playlist}
-        removeFromPlaylist={removeFromPlaylist}
-        onSave={savePlaylist}
-      />
+      <div className="SearchSection">
+        <SearchBar onSearch={onSearch} />
+        <SearchResults
+          searchResultsTracks={searchResults}
+          addToPlaylist={addToPlaylist}
+        />
+      </div>
+
+      <div className="Divider"></div>
+
+      <div className="PlaylistSection">
+        <Playlist
+          playlistName={playlistName}
+          onNameChange={setPlaylistName}
+          playlistTracks={playlist}
+          removeFromPlaylist={removeFromPlaylist}
+          onSave={savePlaylist}
+        />
+      </div>
     </div>
   );
 }

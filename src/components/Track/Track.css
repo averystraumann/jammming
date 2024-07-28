@@ -1,0 +1,30 @@
+.Track {
+  border: 2px #84b59f solid;
+  text-align: left;
+  padding: 0 2% 1%;
+  border-radius: 6px;
+  margin: 2%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Track .h2 {
+  color: #a3c9a8;
+  font-size: 1.2rem;
+}
+
+.Track .h3 {
+  font-size: 1rem;
+}
+
+.Track #add {
+  border: 1px solid #000;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  position: center;
+  margin: 4px;
+  display: inline-block;
+  vertical-align: middle;
+}
