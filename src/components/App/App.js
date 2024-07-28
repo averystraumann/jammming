@@ -30,33 +30,40 @@ function App() {
 
   const savePlaylist = () => {
     const trackUris = playlist.map((track) => track.uri);
-    Spotify.save(playlistName, trackUris).then(() => {
-      setPlaylistName("New Playlist");
-      setPlaylist([]);
-    });
+    if (trackUris.length != 0) {
+      Spotify.save(playlistName, trackUris).then(() => {
+        setPlaylistName("New Playlist");
+        setPlaylist([]);
+      });
+    } else {
+      alert("No songs in playlist!");
+    }
   };
 
   return (
     <div className="App">
-      <div className="SearchSection">
-        <SearchBar onSearch={onSearch} />
-        <SearchResults
-          searchResultsTracks={searchResults}
-          addToPlaylist={addToPlaylist}
-        />
-      </div>
+      <header>jammming</header>
+      <main>
+        <div className="SearchSection">
+          <SearchBar onSearch={onSearch} />
+          <SearchResults
+            searchResultsTracks={searchResults}
+            addToPlaylist={addToPlaylist}
+          />
+        </div>
 
-      <div className="Divider"></div>
+        <div className="Divider"></div>
 
-      <div className="PlaylistSection">
-        <Playlist
-          playlistName={playlistName}
-          onNameChange={setPlaylistName}
-          playlistTracks={playlist}
-          removeFromPlaylist={removeFromPlaylist}
-          onSave={savePlaylist}
-        />
-      </div>
+        <div className="PlaylistSection">
+          <Playlist
+            playlistName={playlistName}
+            onNameChange={setPlaylistName}
+            playlistTracks={playlist}
+            removeFromPlaylist={removeFromPlaylist}
+            onSave={savePlaylist}
+          />
+        </div>
+      </main>
     </div>
   );
 }

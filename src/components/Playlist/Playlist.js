@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Tracklist from "../Tracklist/Tracklist.js";
+import "./Playlist.css";
 
 export default function Playlist({
   playlistName,
@@ -9,7 +10,7 @@ export default function Playlist({
   onSave,
 }) {
   return (
-    <div class="Playlist">
+    <div className="Playlist">
       <input
         defaultValue={playlistName}
         onChange={(e) => onNameChange(e.target.value)}

@@ -19,7 +19,7 @@
 }
 
 .Track #add {
-  border: 1px solid #000;
+  border: 2px solid #ff6666;
   width: 20px;
   height: 20px;
   border-radius: 100%;
@@ -27,4 +27,33 @@
   margin: 4px;
   display: inline-block;
   vertical-align: middle;
+  font-family: monospace;
+  color: #ff6666;
+  font-weight: bold;
+  background-color: #ff666630;
+}
+
+.Track #remove {
+  border: 2px solid #ff6666;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  position: center;
+  margin: 4px;
+  display: inline-block;
+  vertical-align: middle;
+  font-family: monospace;
+  color: #ff6666;
+  font-weight: bold;
+  background-color: #ff666630;
+}
+
+.Track #add:hover {
+  background-color: #ff666660;
+  transition: 0.5s;
+}
+
+.Track #remove:hover {
+  background-color: #ff666660;
+  transition: 0.5s;
 }
