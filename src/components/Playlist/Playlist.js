@@ -8,12 +8,13 @@ export default function Playlist({
   playlistTracks,
   removeFromPlaylist,
   onSave,
+  setPlaylistName,
 }) {
   return (
     <div className="Playlist">
       <input
         defaultValue={playlistName}
-        onChange={(e) => onNameChange(e.target.value)}
+        onChange={(e) => setPlaylistName(e.target.value)}
       />
 
       <Tracklist

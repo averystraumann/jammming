@@ -32,8 +32,8 @@ function App() {
     const trackUris = playlist.map((track) => track.uri);
     if (trackUris.length != 0) {
       Spotify.save(playlistName, trackUris).then(() => {
-        setPlaylistName("New Playlist");
         setPlaylist([]);
+        setPlaylistName("New Playlist");
       });
     } else {
       alert("No songs in playlist!");
@@ -57,7 +57,7 @@ function App() {
         <div className="PlaylistSection">
           <Playlist
             playlistName={playlistName}
-            onNameChange={setPlaylistName}
+            setPlaylistName={setPlaylistName}
             playlistTracks={playlist}
             removeFromPlaylist={removeFromPlaylist}
             onSave={savePlaylist}
