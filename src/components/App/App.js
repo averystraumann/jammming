@@ -1,4 +1,4 @@
-import styles from "./App.css";
+import "./App.css";
 import React, { useState } from "react";
 
 import SearchBar from "../SearchBar/SearchBar.js";
@@ -30,7 +30,7 @@ function App() {
 
   const savePlaylist = () => {
     const trackUris = playlist.map((track) => track.uri);
-    if (trackUris.length != 0) {
+    if (trackUris.length !== 0) {
       Spotify.save(playlistName, trackUris).then(() => {
         setPlaylist([]);
         setPlaylistName("New Playlist");
